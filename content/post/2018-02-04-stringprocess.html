@@ -1,0 +1,259 @@
+---
+title: stringprocess
+author: Jonie
+date: '2018-02-04'
+slug: stringprocess
+categories:
+  - technology
+tags: []
+---
+
+
+
+<pre class="r"><code>grep(pattern, x, ignore.case = FALSE, perl = FALSE, value = FALSE,
+
+     fixed = FALSE, useBytes = FALSE, invert = FALSE)
+
+
+grepl(pattern, x, ignore.case = FALSE, perl = FALSE,
+
+      fixed = FALSE, useBytes = FALSE)
+
+
+sub(pattern, replacement, x, ignore.case = FALSE, perl = FALSE,
+
+    fixed = FALSE, useBytes = FALSE)
+
+
+gsub(pattern, replacement, x, ignore.case = FALSE, perl = FALSE,
+
+     fixed = FALSE, useBytes = FALSE)
+
+
+regexpr(pattern, text, ignore.case = FALSE, perl = FALSE,
+
+        fixed = FALSE, useBytes = FALSE)
+
+
+gregexpr(pattern, text, ignore.case = FALSE, perl = FALSE,
+
+         fixed = FALSE, useBytes = FALSE)
+
+
+regexec(pattern, text, ignore.case = FALSE, perl = FALSE,
+
+        fixed = FALSE, useBytes = FALSE)
+
+        
+
+
+td&lt;-c(&quot;ab&quot;,&quot;cabefabkldab&quot;,&quot;cedab&quot;)
+
+grep #查找含对应字符串（只要包含就可以）或对应pattern的字符串的下标。
+
+&gt; grep(&quot;a&quot;,td)
+
+[1] 1 2 3
+
+&gt; grep(&quot;.*ab\\w*ab\\w*&quot;,td)
+
+[1] 2
+
+
+grepl #查找含对应字符串（只要包含就可以）或对应pattern的字符串的逻辑值（是否包含）
+
+&gt; grepl(&quot;a&quot;,td)
+
+[1] TRUE TRUE TRUE
+
+&gt; grepl(&quot;.*ab\\w*ab\\w*&quot;,td)
+
+[1] FALSE  TRUE FALSE
+
+
+sub #将td中每个变量第一个a替换为xxx。
+
+&gt; sub(&quot;a&quot;,&quot;xxx&quot;,td)
+
+[1] &quot;xxxb&quot;           &quot;cxxxbefabkldab&quot; &quot;cedxxxb&quot; 
+
+
+gsub #将td中所有变量每个a替换为xxx
+
+&gt; gsub(&quot;a&quot;,&quot;xxx&quot;,td)
+
+[1] &quot;xxxb&quot;               &quot;cxxxbefxxxbkldxxxb&quot; &quot;cedxxxb&quot; 
+
+
+regexpr #查找在字符串td中,ab在每个变量中的开始位置、ab这个pattern的长度
+
+gregexpr #查找在字符串td中，ab在所有变量的每个开始位置和这个pattern的长度
+
+&gt; regexpr(&quot;ab&quot;,td,perl=T)
+
+[1] 1 2 4
+
+attr(,&quot;match.length&quot;)
+
+[1] 2 2 2
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+&gt; gregexpr(&quot;ab&quot;,td,perl=T)
+
+[[1]]
+
+[1] 1
+
+attr(,&quot;match.length&quot;)
+
+[1] 2
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+[[2]]
+
+[1]  2  6 11
+
+attr(,&quot;match.length&quot;)
+
+[1] 2 2 2
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+[[3]]
+
+[1] 4
+
+attr(,&quot;match.length&quot;)
+
+[1] 2
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+&gt; regexpr(&quot;.*ab\\w*ab\\w*&quot;,td)
+
+[1] -1  1 -1
+
+attr(,&quot;match.length&quot;)
+
+[1] -1 12 -1
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+&gt; gregexpr(&quot;ab\\w{3}ab\\w*&quot;,td)
+
+[[1]]
+
+[1] -1
+
+attr(,&quot;match.length&quot;)
+
+[1] -1
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+[[2]]
+
+[1] 6
+
+attr(,&quot;match.length&quot;)
+
+[1] 7
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+[[3]]
+
+[1] -1
+
+attr(,&quot;match.length&quot;)
+
+[1] -1
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+
+x &lt;- &quot;http://stat.umn.edu:80/xyz&quot;
+
+m &lt;- regexec(&quot;^(([^:]+)://)?([^:/]+)(:([0-9]+))?(/.*)&quot;, x)
+
+m
+
+regmatches(x, m)
+
+## Element 3 is the protocol, 4 is the host, 6 is the port, and 7
+
+## is the path.  We can use this to make a function for extracting the
+
+## parts of a URL:
+
+URL_parts &lt;- function(x) {
+
+    m &lt;- regexec(&quot;^(([^:]+)://)?([^:/]+)(:([0-9]+))?(/.*)&quot;, x)
+
+    parts &lt;- do.call(rbind,
+
+                     lapply(regmatches(x, m), `[`, c(3L, 4L, 6L, 7L)))
+
+    colnames(parts) &lt;- c(&quot;protocol&quot;,&quot;host&quot;,&quot;port&quot;,&quot;path&quot;)
+
+    parts
+
+}
+
+URL_parts(x)
+
+
+
+&gt; regexec(&quot;^(([^:]+)://)?([^:/]+)(:([0-9]+))?(/.*)&quot;, x)
+
+[[1]]
+
+[1]  1  1  1  8 20 21 23
+
+attr(,&quot;match.length&quot;)
+
+[1] 26  7  4 12  3  2  4
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE
+
+
+&gt; gregexpr(&quot;^(([^:]+)://)?([^:/]+)(:([0-9]+))?(/.*)&quot;, x)
+
+[[1]]
+
+[1] 1
+
+attr(,&quot;match.length&quot;)
+
+[1] 26
+
+attr(,&quot;useBytes&quot;)
+
+[1] TRUE</code></pre>
