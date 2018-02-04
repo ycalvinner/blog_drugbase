@@ -31,15 +31,6 @@ This is Jonie that expect to communicate with you.</description>
     </item>
     
     <item>
-      <title>my first post</title>
-      <link>/post/2018/01/27/my-first-post/</link>
-      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/01/27/my-first-post/</guid>
-      <description>plot(1:3,1:3)</description>
-    </item>
-    
-    <item>
       <title>Another Note on A blogdown Tutorial</title>
       <link>/note/2017/06/14/another-note/</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
