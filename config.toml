@@ -34,7 +34,7 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "Memu refer below"
-    footer = "Powered By &copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+    footer = "Powered By &copy; [Jonie](http://www.drugqm.com) 2018 | [Github](https://github.com/ycalvinner/)"
 
   highlightjsVersion = "9.12.0"
   highlightjsCDN = "//cdn.bootcss.com"
