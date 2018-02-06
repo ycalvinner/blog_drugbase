@@ -11,5 +11,5 @@ There're 2 address for this site:
 
 You can also visit the other site maintain by me:
 
- - [Another Drug Quality Management Site](www.drugqm.com)
- - [Trend Analysis & Report Generation Automation System](jonie.shinyapps.io/utility)
+ - [Another Drug Quality Management Site](http://www.drugqm.com)
+ - [Trend Analysis & Report Generation Automation System](http://jonie.shinyapps.io/utility)
