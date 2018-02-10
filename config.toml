@@ -34,7 +34,7 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "Memu refer below"
-    footer = "Powered By &copy; [Jonie](http://www.drugqm.com) 2018 | [Github](https://github.com/ycalvinner/)"
+    footer = "Powered By &copy; [Jonie](http://www.drugqm.com) 2018 | [Github](https://github.com/ycalvinner/) | [Trend Analysis App](http://jonie.shinyapps.io/utility)"
 
   highlightjsVersion = "9.12.0"
   highlightjsCDN = "//cdn.bootcss.com"
