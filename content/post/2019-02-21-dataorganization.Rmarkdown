@@ -1,5 +1,5 @@
 ---
-title: DataOrganization
+title: Data Organization
 author: 'Jonie'
 date: '2019-02-21'
 slug: dataorganization

@@ -1,5 +1,5 @@
 ---
-title: stringprocess
+title: String process
 author: Jonie
 date: '2018-02-04'
 slug: stringprocess
