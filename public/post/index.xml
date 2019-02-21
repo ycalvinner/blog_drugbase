@@ -27,6 +27,22 @@
     </item>
     
     <item>
+      <title>趋势分析自动化</title>
+      <link>/post/2019/02/21/trendautomation/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/02/21/trendautomation/</guid>
+      <description>GMP关于年度产品质量回顾的要求 根据GMP第八节，应当按照操作规程，每年对所有生产的药品按品种进行产品质量回顾分析，以确认工艺稳定可靠，以及原辅料、成品现行质量标准的适用性，及时发现不良趋势，确定产品及工艺改进的方向。应当考虑以往回顾分析的历史数据，还应当对产品质量回顾分析的有效性进行自检。
+根据GMP要求，我们每年都会做年度产品质量回顾，同时，趋势分析也是其中比较重要的一个方面，但是在这个过程中往往遇到的比较多的问题：
+ SPC中，连续多点上升或下降，发生在好几个月前，调查无从下手。 SPC中，个别点较高，调查无从下手。  往往这时，我是我们最为苦恼的时候。
+解决办法 有没有什么解决办法呢？有！那就是趋势分析自动化：
+ 它不但能让我们日常在短时间内能做出趋势图，方便我们日常高频次的去非正式回顾。 还可以以GMP用途，作为日常趋势回顾，来配合其它的比如限度评估的策略。  下面我们来展示几种软件的趋势分析自动化的示例。
+R 语言 我开发了一个基于R语言的网页应用的电子系统，它可以实现多种功能，而功能之一，就是趋势分析自动化。我们只需要打开网址，就可以自动显示趋势图。（更多彩蛋请点此）
+JMP 我们可以定义一个脚本，只要运行一下，自动读取电脑上的excel数据，并绘制出图形。脚本和效果如下：
+ dt1 = Open( &amp;ldquo;C:\Users...\JMP_SPC.xlsx&amp;rdquo;, Worksheets( &amp;ldquo;Sheet1&amp;rdquo; ), columns( New Column( &amp;ldquo;A含量&amp;rdquo;, Numeric, &amp;ldquo;Continuous&amp;rdquo;, Format( &amp;ldquo;Best&amp;rdquo;, 12 ) ) ), Import Settings( End Of Line( CRLF, CR, LF ), End Of Field( Comma, CSV( 1 ) ), Strip Quotes( 0 ), Use Apostrophe as Quotation Mark( 0 ), Use Regional Settings( 0 ), Scan Whole File( 1 ), Treat empty columns as numeric( 0 ), CompressNumericColumns( 0 ), CompressCharacterColumns( 0 ), CompressAllowListCheck( 0 ), Labels( 1 ), Column Names Start( 1 ), Data Starts( 2 ), Lines To Read( &amp;ldquo;All&amp;rdquo; ), Year Rule( &amp;ldquo;20xx&amp;rdquo; ) ) ); Overlay Plot( Y( :A含量 ), Separate Axes( 1 ) ,Connect Thru Missing( 1 ))</description>
+    </item>
+    
+    <item>
       <title>String process</title>
       <link>/post/2018/02/04/stringprocess/</link>
       <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
