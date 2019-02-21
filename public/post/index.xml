@@ -6,10 +6,25 @@
     <description>Recent content in Posts on Drug Base</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DataOrganization</title>
+      <link>/post/2019/02/21/dataorganization/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/02/21/dataorganization/</guid>
+      <description>格式要求  没有空行或空列 没有合并单元格 数值性数据不应包含符号，比如百分号。 重复内容应该包含相同内容。 每个单元格只填写一个信息元素。 只有一个标题行。 相同变量的所有元素应该在同一列。 前后一致。 数据值和非数据型数据不在同一列混放。 缺失值留空，不要用N/A（可以用NA）。 始终如一的保持输入格式要求，比如特殊字符，空值，大小写，等等 不用格式表示特殊意义，如需要，可以加一列字段表示。比如，性别用颜色进行区分，我们可以加一列，并分别用M表示男性，用F表示女性。  稳定性数据格式 原始格式
+修改后
+环境监测数据 修改前
+修改后-1
+可以使用这种格式，也是比较通用的格式。
+修改后-2
+也可以使用这种格式。</description>
+    </item>
     
     <item>
       <title>stringprocess</title>
