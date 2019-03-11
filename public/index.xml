@@ -32,14 +32,25 @@
       <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/2019/02/21/trendautomation/</guid>
-      <description>GMP关于年度产品质量回顾的要求 根据GMP第八节，应当按照操作规程，每年对所有生产的药品按品种进行产品质量回顾分析，以确认工艺稳定可靠，以及原辅料、成品现行质量标准的适用性，及时发现不良趋势，确定产品及工艺改进的方向。应当考虑以往回顾分析的历史数据，还应当对产品质量回顾分析的有效性进行自检。
+      <description>趋势分析的两大类：  在药品质量管理活动中，我们往往有很多的数据需要进行趋势分析，并起草报告。例如“年度产品质量回顾”。 另外，我们可能往往还需要有一个方便的方式来更快速的以更高频次访问数据。例如：一个电子系统，能自动生成我们想看的图形。  对于趋势分析报告来说，同时也可以基于第2条，因为一个方便的获取趋势分析图形的途径，能让我们更快速的完成报告。
+ 想象一下以下场景：
+不断的点点点……呀，出来一张趋势图，copy, paste。然后 继续点点点……呀，又出来一张趋势图，copy, paste。然后……
+咦？有张图做错了，重新点点点……呀，出来了，copy, paste……
+呼，终于弄完了……
+ 这里，一方面，我们只能靠手工去生成图形，另一方面，手工操作容易犯错，第三方面，错了以后纠正的时间和操作成本高。
+就像这篇文章里提到的一样,&amp;ldquo;all result from data should be reproducible&amp;rdquo;。这里一方面是指结果要容易重现，另一方面是指结果要可以重现。（当你面对一个结果的时候，鬼知道做这个结果的人都做了什么具体的操作）
+本文章的目的： 所以，本文就着重在两个方面来讲：
+ 趋势分析自动化：用于日常的高频快速趋势图。 报告生成自动化：用于可重复结果的报告的快速生成。  利用趋势分析自动化，自动生成图形。 当你某个结果错了的时候，鼠标点几个，改一下设置，直接重新生成即可。   GMP关于年度产品质量回顾的要求 根据GMP第八节，应当按照操作规程，每年对所有生产的药品按品种进行产品质量回顾分析，以确认工艺稳定可靠，以及原辅料、成品现行质量标准的适用性，及时发现不良趋势，确定产品及工艺改进的方向。应当考虑以往回顾分析的历史数据，还应当对产品质量回顾分析的有效性进行自检。
 根据GMP要求，我们每年都会做年度产品质量回顾，同时，趋势分析也是其中比较重要的一个方面，但是在这个过程中往往遇到的比较多的问题：
  SPC中，连续多点上升或下降，发生在好几个月前，调查无从下手。 SPC中，个别点较高，调查无从下手。  往往这时，我是我们最为苦恼的时候。
 解决办法 有没有什么解决办法呢？有！那就是趋势分析自动化：
  它不但能让我们日常在短时间内能做出趋势图，方便我们日常高频次的去非正式回顾。 还可以以GMP用途，作为日常趋势回顾，来配合其它的比如限度评估的策略。  下面我们来展示几种软件的趋势分析自动化的示例。
-R 语言 我开发了一个基于R语言的网页应用的电子系统，它可以实现多种功能，而功能之一，就是趋势分析自动化。我们只需要打开网址，就可以自动显示趋势图。（更多彩蛋请点此）
-JMP 我们可以定义一个脚本，只要运行一下，自动读取电脑上的excel数据，并绘制出图形。脚本和效果如下：
- dt1 = Open( &amp;ldquo;C:\Users...\JMP_SPC.xlsx&amp;rdquo;, Worksheets( &amp;ldquo;Sheet1&amp;rdquo; ), columns( New Column( &amp;ldquo;A含量&amp;rdquo;, Numeric, &amp;ldquo;Continuous&amp;rdquo;, Format( &amp;ldquo;Best&amp;rdquo;, 12 ) ) ), Import Settings( End Of Line( CRLF, CR, LF ), End Of Field( Comma, CSV( 1 ) ), Strip Quotes( 0 ), Use Apostrophe as Quotation Mark( 0 ), Use Regional Settings( 0 ), Scan Whole File( 1 ), Treat empty columns as numeric( 0 ), CompressNumericColumns( 0 ), CompressCharacterColumns( 0 ), CompressAllowListCheck( 0 ), Labels( 1 ), Column Names Start( 1 ), Data Starts( 2 ), Lines To Read( &amp;ldquo;All&amp;rdquo; ), Year Rule( &amp;ldquo;20xx&amp;rdquo; ) ) ); Overlay Plot( Y( :A含量 ), Separate Axes( 1 ) ,Connect Thru Missing( 1 ))</description>
+示例数据 本贴所有数据均使用此数据：
+点此下载
+R语言：Utility Trend Analysis Application 我开发了一个基于R语言的数据分析电子系统，它是一个网页应用。目前没有帐号控制，但是大家可以作为非GMP用途用作日常查看趋势图。总的来说还是非常方便的。
+地址：http://apps.drugqm.com:3838/sample-apps/Trend_Automation/
+分析数据范围：公用工程系统数据，包括总需氧菌，电导，TOC
+使用介绍： 趋势分析自动化  首先打开网址，如图，点击OK或弹出窗口外部区域，即可关闭弹出窗口：   然后点击顶部导航栏的Water-WFO 或者 Water-PW，这里点击Water-PW。点击Browse上传文件（上面的示例文件或者自己的数据按示例文件整理。注意如果使用本电子系统，示例文件的工作薄名和列名不能修改，内容可以修改。），然后选择日期范围，点击Apply。右侧即显示图形。  如果想不显示所有点，只想显示其中一部分，则点击Individual，然后下面会出现一个文本框，点击一下，则可以选择数据中包含的点。确认日期范围，所有筛选均选择完后，点击Apply。图形则会自动更新。</description>
     </item>
     
     <item>
