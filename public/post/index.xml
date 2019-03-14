@@ -6,24 +6,18 @@
     <description>Recent content in Posts on Drug Base</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Data Organization</title>
-      <link>/post/2019/02/21/dataorganization/</link>
-      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      <title>T Distribution</title>
+      <link>/post/2019/03/14/t-distribution/</link>
+      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019/02/21/dataorganization/</guid>
-      <description>格式要求  没有空行或空列 没有合并单元格 数值性数据不应包含符号，比如百分号。 重复内容应该包含相同内容。 每个单元格只填写一个信息元素。 只有一个标题行。 相同变量的所有元素应该在同一列。 前后一致。 数据值和非数据型数据不在同一列混放。 缺失值留空，不要用N/A（可以用NA）。 始终如一的保持输入格式要求，比如特殊字符，空值，大小写，等等 不用格式表示特殊意义，如需要，可以加一列字段表示。比如，性别用颜色进行区分，我们可以加一列，并分别用M表示男性，用F表示女性。  稳定性数据格式 原始格式
-修改后
-环境监测数据 修改前
-修改后-1
-可以使用这种格式，也是比较通用的格式。
-修改后-2
-也可以使用这种格式。</description>
+      <guid>/post/2019/03/14/t-distribution/</guid>
+      <description>The T Distibution Percentile Table is as below:</description>
     </item>
     
     <item>
@@ -51,6 +45,21 @@ R语言：Utility Trend Analysis Application 我开发了一个基于R语言的�
 地址：http://apps.drugqm.com:3838/sample-apps/Trend_Automation/
 分析数据范围：公用工程系统数据，包括总需氧菌，电导，TOC
 使用介绍： 趋势分析自动化  首先打开网址，如图，点击OK或弹出窗口外部区域，即可关闭弹出窗口：   然后点击顶部导航栏的Water-WFO 或者 Water-PW，这里点击Water-PW。点击Browse上传文件（上面的示例文件或者自己的数据按示例文件整理。注意如果使用本电子系统，示例文件的工作薄名和列名不能修改，内容可以修改。），然后选择日期范围，点击Apply。右侧即显示图形。  如果想不显示所有点，只想显示其中一部分，则点击Individual，然后下面会出现一个文本框，点击一下，则可以选择数据中包含的点。确认日期范围，所有筛选均选择完后，点击Apply。图形则会自动更新。</description>
+    </item>
+    
+    <item>
+      <title>Data Organization</title>
+      <link>/post/2019/02/21/dataorganization/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/02/21/dataorganization/</guid>
+      <description>格式要求  没有空行或空列 没有合并单元格 数值性数据不应包含符号，比如百分号。 重复内容应该包含相同内容。 每个单元格只填写一个信息元素。 只有一个标题行。 相同变量的所有元素应该在同一列。 前后一致。 数据值和非数据型数据不在同一列混放。 缺失值留空，不要用N/A（可以用NA）。 始终如一的保持输入格式要求，比如特殊字符，空值，大小写，等等 不用格式表示特殊意义，如需要，可以加一列字段表示。比如，性别用颜色进行区分，我们可以加一列，并分别用M表示男性，用F表示女性。  稳定性数据格式 原始格式
+修改后
+环境监测数据 修改前
+修改后-1
+可以使用这种格式，也是比较通用的格式。
+修改后-2
+也可以使用这种格式。</description>
     </item>
     
     <item>

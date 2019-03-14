@@ -6,6 +6,7 @@ slug: trendautomation
 categories:
   - TrendAnalysis
 tags: []
+weight: 1
 ---
 ## 趋势分析的两大类：
 
