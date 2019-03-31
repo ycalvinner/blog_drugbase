@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Drug Base</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Limit Evaluation</title>
+      <link>/tags/limit-evaluation/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/limit-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistical</title>
+      <link>/tags/statistical/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/statistical/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Tutorial</title>
@@ -16,6 +35,15 @@
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nonparametric</title>
+      <link>/tags/nonparametric/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/nonparametric/</guid>
       <description></description>
     </item>
     

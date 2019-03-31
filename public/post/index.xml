@@ -48,6 +48,16 @@ R语言：Utility Trend Analysis Application 我开发了一个基于R语言的�
     </item>
     
     <item>
+      <title>Kernel Quantile Estimation</title>
+      <link>/post/2019/03/31/kernel-quantile-estimation/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/31/kernel-quantile-estimation/</guid>
+      <description>Firstly, let&amp;rsquo;s generate a dataset with continous data. set.seed(1) (rand_data&amp;lt;-round(c(rnorm(5,10,2),rnorm(5,80,4)),0))  ## [1] 9 10 8 13 11 77 82 83 82 79  JMP We can use JMP to fit the smooth curve model in JMP which has another name Kernel Density Estimation. Then we can use this model to calculate the quantile.
+R Of course, you have another choice to finish this work with R. there&amp;rsquo;re sereval ways to do this.</description>
+    </item>
+    
+    <item>
       <title>Data Organization</title>
       <link>/post/2019/02/21/dataorganization/</link>
       <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
