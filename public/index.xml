@@ -48,6 +48,24 @@ R语言：Utility Trend Analysis Application 我开发了一个基于R语言的�
     </item>
     
     <item>
+      <title>Interactive: JMP and R</title>
+      <link>/post/2019/04/01/interactive-jmp-and-r/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/04/01/interactive-jmp-and-r/</guid>
+      <description>General Summary There&amp;rsquo;s many statistical analysis software, jmp and R are two of them.
+R input JMP file Also, there&amp;rsquo;s many ways to import data from other format to R, but there&amp;rsquo;s no directly way to import jmp data into R.
+ library(RDCOMClient)
+jmp &amp;lt;- COMCreate(&amp;ldquo;JMP.Application&amp;rdquo;)
+doc = jmp$OpenDocument(&amp;ldquo;C:/Demo.jmp&amp;rdquo;)
+doc$SaveAs(&amp;ldquo;d:/Demo.csv&amp;rdquo;)
+td&amp;lt;-read.csv(&amp;ldquo;d:/Demo.csv&amp;rdquo;)
+head(td)
+file.remove(&amp;ldquo;d:/Demo.csv&amp;rdquo;)
+ JMP call R JMP can also call R and return the calculated result or graphics to JMP.</description>
+    </item>
+    
+    <item>
       <title>Kernel Quantile Estimation</title>
       <link>/post/2019/03/31/kernel-quantile-estimation/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
@@ -108,6 +126,15 @@ This is Jonie that expect to communicate with you.</description>
       <guid>/note/2017/06/13/a-quick-note/</guid>
       <description>To me, the two most impressive websites based on blogdown are:
  Rob J Hyndman&amp;rsquo;s personal website. Live Free or Dichotomize by Lucy and Nick et al.  I&amp;rsquo;m sure there will be more.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/1/01/01/</guid>
+      <description>Interactive: JMP and Rcode{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
     </item>
     
   </channel>

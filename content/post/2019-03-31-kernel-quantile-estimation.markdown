@@ -36,7 +36,7 @@ Of course, you have another choice to finish this work with R. there're sereval 
 
 Details refer to [Wikipedia](https://en.wikipedia.org/wiki/Kernel_density_estimation)
 
-**Way 1**
+**Option 1**
 
 You can use `density` function in `stat` package to fit estimate the model and used as a parameter in function `quantile.density` in `spatstat` package to calculate the quantile.
 
@@ -78,7 +78,7 @@ quantile.density(density(rand_data),c(0.00135,0.5,0.99865))
 ```
 
 
-**Way 2**
+**Option 2**
 
 You canalso use `density` function in `stat` package to fit estimate the model and use `uniroot` function to calculate the root result which. sometimes, the result is the same with JMP, if it is not consist with the result in JMP, it may be caused by the bw value, and you can specify the bw value to get the same value. Of course, the result in JMP is not the "correct result", you can calculate the quantile with appropriate method.
 
@@ -101,3 +101,30 @@ for(i in c(0.00135,0.5,0.99865)){
 ```
 
 
+**Option 3**
+
+There's a function to calculate the kde funciton
+
+
+```r
+set.seed(1)
+data = c(rnorm(100,-10,1),rnorm(100,10,1))
+ 
+phi = function(x) exp(-.5*x^2)/sqrt(2*pi)
+ 
+tpdf = function(x) phi(x+10)/2+phi(x-10)/2
+ 
+h = sd(data)*(4/3/length(data))^(1/5)
+ 
+Kernel2 = function(x) mean(phi((x-data)/h)/h)
+ 
+kpdf = function(x) sapply(x,Kernel2)
+ 
+x=seq(-25,25,length=1000)
+ 
+plot(x,tpdf(x),type="l",ylim=c(0,0.23),col="red")
+par(new=T)
+plot(x,kpdf(x),type="l",ylim=c(0,0.23),xlab="",ylab="",axes=F)
+```
+
+<img src="/post/2019-03-31-kernel-quantile-estimation_files/figure-html/unnamed-chunk-4-1.png" width="672" />
