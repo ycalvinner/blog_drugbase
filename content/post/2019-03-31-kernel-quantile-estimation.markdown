@@ -36,7 +36,7 @@ Of course, you have another choice to finish this work with R. there're sereval 
 
 Details refer to [Wikipedia](https://en.wikipedia.org/wiki/Kernel_density_estimation)
 
-** Way 1 **
+**Way 1**
 
 You can use `density` function in `stat` package to fit estimate the model and used as a parameter in function `quantile.density` in `spatstat` package to calculate the quantile.
 
@@ -78,7 +78,7 @@ quantile.density(density(rand_data),c(0.00135,0.5,0.99865))
 ```
 
 
-** Way 2 **
+**Way 2**
 
 You canalso use `density` function in `stat` package to fit estimate the model and use `uniroot` function to calculate the root result which. sometimes, the result is the same with JMP, if it is not consist with the result in JMP, it may be caused by the bw value, and you can specify the bw value to get the same value. Of course, the result in JMP is not the "correct result", you can calculate the quantile with appropriate method.
 
