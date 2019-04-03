@@ -48,6 +48,20 @@ R语言：Utility Trend Analysis Application 我开发了一个基于R语言的�
     </item>
     
     <item>
+      <title>基于Minitab, JMP, SPSS, R做回归分析</title>
+      <link>/post/2019/04/03/regression-analysis-with-minitab-jmp-and-r/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/04/03/regression-analysis-with-minitab-jmp-and-r/</guid>
+      <description> 在稳定性实验考察的数据分析中，用的最多的往往是一般线性模型，现在软件选择这么多，该如何区分一些参数呢？下面做简要介绍。
+Type：检验的平方和  I：序贯型，嵌套设计 II：平衡设计，仅主效应 III：调整型 IV：不完整数据  Contrasts(对比):  Minitab/JMP无此项 R/SPSS有。   R中: options(contrasts=c(unordered=&amp;quot;contr.treatment&amp;quot;,ordered=&amp;quot;contr.poly&amp;quot;))为默认选项。此选项在方差分析或回归分析建模时，如果有因子，可以使用此参数。第一个是无序因子的参数，第二个是有序因子的参数。同时，也可以通过在建模时指定contrasts参数。比如td_fit&amp;lt;-lm(Potency~Lot*Time,data=td,contrasts = list(Lot=&amp;quot;contr.sum&amp;quot;))
+  R（系数对比）:
+  首先介绍一下系数对比。
+- contr.helmert: - contr.poly - contr.SAS: SPSS默认使用此对比方式，设置此项时，R语言返回结果与SPSS的参数估计值相同。 - contr.sum: JMP默认使用此对比方式，设置此项时，R语言返回结果与JMP的协变量，交互效应，截距参数 估计值相同。 - contr.treatment：Minitab默认使用此对比方式，设置此项时，R语言返回结果与Minitab的参数估计值相 同。   R(方差分析表）  方差分析表来讲，Minitab, JMP, SPSS在模型,误差,合计上一致。但回归项下各主效应和交互效应的平方和不同。
+- contr.helmert/contr.sum/contr.poly:设置此项时，R语言返回结果与SPSS的参数估计值相同。 - contr.SAS: 无具体描述 - contr.treatment：无具体描述  </description>
+    </item>
+    
+    <item>
       <title>Interactive: JMP and R</title>
       <link>/post/2019/04/01/interactive-jmp-and-r/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
@@ -135,6 +149,15 @@ This is Jonie that expect to communicate with you.</description>
       
       <guid>/post/1/01/01/</guid>
       <description>Interactive: JMP and Rcode{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/1/01/01/</guid>
+      <description>基于Minitab, JMP, SPSS, R做回归分析code{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
     </item>
     
   </channel>
