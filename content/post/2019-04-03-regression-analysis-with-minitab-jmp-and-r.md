@@ -83,7 +83,7 @@ slope=tan(A)=a/b, 其中a是截距变化，b是横坐标变化。
 JMP虽然在计算系数的时候中心化了，但是计算截距的时候，还原成了真实截距。
 
 
-### 结果输出对比 (R vs JMP)
+### 结果输出对比 (R vs Minitab)
 
 Minitab的分析结果如下
 ![](https://blog-1255638709.cos.ap-chengdu.myqcloud.com/RegressionMinitab.png)
