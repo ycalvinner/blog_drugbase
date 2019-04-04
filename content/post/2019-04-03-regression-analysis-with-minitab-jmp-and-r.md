@@ -86,7 +86,7 @@ JMP虽然在计算系数的时候中心化了，但是计算截距的时候，�
 ### 结果输出对比 (R vs JMP)
 
 Minitab的分析结果如下
-![](./pic/RegressionMinitab.png)
+![](https://blog-1255638709.cos.ap-chengdu.myqcloud.com/RegressionMinitab.png)
 
 
 **R Code**
@@ -99,6 +99,6 @@ Anova(td_fit,type="III")
 
 
 R的分析结果如下
-![Regression Analysis in R](./Regression_R2.png)
+![Regression Analysis in R](https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_R2.png)
 
 结果一致。
