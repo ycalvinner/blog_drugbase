@@ -49,3 +49,56 @@ tags:
     - contr.SAS: 无具体描述
     - contr.treatment：无具体描述
     
+### 结果输出对比 (R vs JMP)
+
+**文件下载：**
+
+[JMP 文件](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_interactive.jmp)
+[CSV 数据文件](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_interactive.csv)
+
+JMP的分析结果如下
+![Regression Analysis in JMP](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/regression_JMP.JPG)
+
+**R Code**
+
+>td<-read.csv("~/regression_interactive.csv")
+td$time<-scale(td$Time,scale = FALSE,center = TRUE)
+td_fit<-lm(Potency~time,data=td,contrasts=list(Batch="contr.sum"))
+summary(td_fit)
+library(car)
+Anova(td_fit,type="III")
+
+
+R的分析结果如下
+![Regression Analysis in R](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_R.png)
+
+#### 其中，比较重要的是对于无序因子的SS平方和计算的设置，要设置成`"contr.sum"`,另外，应该把Time中心化，然后再拟合模型。
+
+![](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_intercept.png)
+
+slope=tan(A)=a/b, 其中a是截距变化，b是横坐标变化。
+
+所以，中心化以后，横坐标减掉了7.5，所以截距减少(a)=斜率(slope) x 横坐标变化(b)=-0.22 x 7.5=-1.65，所以真实截距=98.88333-(-1.65)=100.53333。
+
+JMP虽然在计算系数的时候中心化了，但是计算截距的时候，还原成了真实截距。
+
+
+### 结果输出对比 (R vs JMP)
+
+Minitab的分析结果如下
+![](./pic/RegressionMinitab.png)
+
+
+**R Code**
+
+>td<-read.csv("~/regression_interactive.csv")
+td_fit<-lm(Potency~time,data=td,contrasts=list(Batch="contr.treatment"))
+summary(td_fit)
+library(car)
+Anova(td_fit,type="III")
+
+
+R的分析结果如下
+![Regression Analysis in R](./Regression_R2.png)
+
+结果一致。
