@@ -105,3 +105,41 @@ R的分析结果如下
 
 结果一致。
 
+
+### 结果输出对比 (R vs Minitab)
+
+
+#### 方差分析表
+
+**SPSS**
+
+![](https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_ANOVA_SPSS2.png)
+
+
+**R Code**
+
+>td<-read.csv("~/regression_interactive.csv")
+td_fit<-lm(Potency~Batch*Time,data=td,contrasts=list(Batch="contr.SAS"))
+summary(td_fit)
+
+
+**R Result**
+
+![](https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_ANOVA_R.png)
+
+#### 系数表
+
+**SPSS**
+
+![](	https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_coefficient_SPSS2.png)
+
+**R Code**
+
+>td_fit2<-lm(Potency~Batch*Time,data=td,contrasts=list(Batch="contr.helmert"))
+library(car)
+print(Anova(td_fit2,type="III"),digits=7)
+#drop1(td_fit2,~.,test="F")
+
+**R Result**
+
+![](	https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_coefficient_R3.png)
