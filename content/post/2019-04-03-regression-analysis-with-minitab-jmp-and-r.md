@@ -103,12 +103,12 @@ Anova(td_fit,type="III")
 
 R的分析结果如下
 
-![Regression Analysis in R](	https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_R2.pngg)
+![Regression Analysis in R](	https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_R2.png)
 
 结果一致。
 
 
-### 结果输出对比 (R vs Minitab)
+### 结果输出对比 (R vs SPSS)
 
 
 #### 方差分析表
