@@ -76,7 +76,7 @@ R的分析结果如下
 
 #### 其中，比较重要的是对于无序因子的SS平方和计算的设置，要设置成`"contr.sum"`,另外，应该把Time中心化，然后再拟合模型。
 
-![](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_intercept.png)
+![](https://blog-1255638709.cos.ap-chengdu.myqcloud.com/Regression_R2.png)
 
 slope=tan(A)=a/b, 其中a是截距变化，b是横坐标变化。
 
