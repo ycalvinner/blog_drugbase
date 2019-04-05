@@ -59,8 +59,10 @@ Type：检验的平方和  I：序贯型，嵌套设计 II：平衡设计，仅�
   首先介绍一下系数对比。
 - contr.helmert: - contr.poly - contr.SAS: SPSS默认使用此对比方式，设置此项时，R语言返回结果与SPSS的参数估计值相同。 - contr.sum: JMP默认使用此对比方式，设置此项时，R语言返回结果与JMP的协变量，交互效应，截距参数 估计值相同。 - contr.treatment：Minitab默认使用此对比方式，设置此项时，R语言返回结果与Minitab的参数估计值相 同。   R(方差分析表）  方差分析表来讲，Minitab, JMP, SPSS在模型,误差,合计上一致。但回归项下各主效应和交互效应的平方和不同。
 - contr.helmert/contr.sum/contr.poly:设置此项时，R语言返回结果与SPSS的参数估计值相同。 - contr.SAS: 无具体描述 - contr.treatment：无具体描述  结果输出对比 (R vs JMP) 文件下载：
-JMP 文件 CSV 数据文件
-JMP的分析结果如下 R Code
+JMP 文件
+CSV 数据文件
+JMP的分析结果如下
+R Code
  td&amp;lt;-read.csv(&amp;rdquo;~/regression_interactive.csv&amp;rdquo;) td$time&amp;lt;-scale(td$Time,scale = FALSE,center = TRUE) td_fit&amp;lt;-lm(Potency~time,data=td,contrasts=list(Batch=&amp;ldquo;contr.</description>
     </item>
     

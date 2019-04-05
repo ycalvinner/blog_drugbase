@@ -54,9 +54,11 @@ tags:
 **文件下载：**
 
 [JMP 文件](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_interactive.jmp)
+
 [CSV 数据文件](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/Regression_interactive.csv)
 
 JMP的分析结果如下
+
 ![Regression Analysis in JMP](https://datasciences-1255638709.cos.ap-shanghai.myqcloud.com/regression_JMP.JPG)
 
 **R Code**
