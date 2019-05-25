@@ -1,0 +1,23 @@
+---
+title: Add grid element into ggplot2 plot
+author: Jonie
+date: '2019-05-25'
+slug: add-grid-element-into-ggplot2-plot
+categories:
+  - Statistics
+tags:
+  - R
+  - Statistical
+---
+
+
+
+<p>This is a demo to introduce how to add grid element into ggplot2 visualization plot.</p>
+<pre class="r"><code>library(ggplot2)
+library(grid)
+ggplot(mtcars,aes(x=mpg,y=wt))+geom_point()
+current.vpTree()
+downViewport(&quot;panel.7-5-7-5&quot;)
+pushViewport(dataViewport(mtcars$mpg,mtcars$wt))
+grid.text(x=12.5,y=4.5,default.units = &quot;native&quot;,label=&quot;Jonie&quot;,just=c(&quot;left&quot;,&quot;top&quot;))
+grid.points(x=12.5,y=4.5,gp=gpar(col=&quot;red&quot;),default.units = &quot;native&quot;)</code></pre>

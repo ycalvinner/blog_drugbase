@@ -48,6 +48,16 @@ R语言：Utility Trend Analysis Application 我开发了一个基于R语言的�
     </item>
     
     <item>
+      <title>Add grid element into ggplot2 plot</title>
+      <link>/post/2019/05/25/add-grid-element-into-ggplot2-plot/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/05/25/add-grid-element-into-ggplot2-plot/</guid>
+      <description>This is a demo to introduce how to add grid element into ggplot2 visualization plot.
+library(ggplot2)library(grid)ggplot(mtcars,aes(x=mpg,y=wt))+geom_point()current.vpTree()downViewport(&amp;quot;panel.7-5-7-5&amp;quot;)pushViewport(dataViewport(mtcars$mpg,mtcars$wt))grid.text(x=12.5,y=4.5,default.units = &amp;quot;native&amp;quot;,label=&amp;quot;Jonie&amp;quot;,just=c(&amp;quot;left&amp;quot;,&amp;quot;top&amp;quot;))grid.points(x=12.5,y=4.5,gp=gpar(col=&amp;quot;red&amp;quot;),default.units = &amp;quot;native&amp;quot;)</description>
+    </item>
+    
+    <item>
       <title>基于Minitab, JMP, SPSS, R做回归分析</title>
       <link>/post/2019/04/03/regression-analysis-with-minitab-jmp-and-r/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
